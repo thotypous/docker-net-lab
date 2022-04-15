@@ -3,4 +3,4 @@ FROM docker.io/fauria/vsftpd
 RUN yum -y update && yum clean all && \
     yum install -y dhclient && yum clean all && \
     sed -i '/\/usr\/sbin\/vsftpd/ i dhclient eth0' /usr/sbin/run-vsftpd.sh && \
-    sed -i '/\/usr\/sbin\/vsftpd/ i echo "· IP address: $(ip -o -4 addr list eth0 | awk "{print \\$4}" | cut -d/ -f1)"' /usr/sbin/run-vsftpd.sh
+    sed -i '/\/usr\/sbin\/vsftpd/ i echo "	· IP address: $(ip -o -4 addr list eth0 | awk "{print \\$4}" | cut -d/ -f1)"' /usr/sbin/run-vsftpd.sh
