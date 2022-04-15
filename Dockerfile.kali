@@ -3,5 +3,6 @@ RUN apt-get update && \
     apt-get install -y --no-install-recommends \
         isc-dhcp-client procps iputils-ping iputils-arping tmux \
         tshark yersinia ettercap-text-only \
+        netcat-traditional nmap \
         tcpreplay python3-scapy
 ADD cam_overflow.py /root/
